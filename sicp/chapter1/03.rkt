@@ -10,7 +10,7 @@
 (define (sum-square-largest a b c)
   (cond ((and (<= a b) (< a c)) (sum-of-squares b c))
         ((and (< b a) (<= b c)) (sum-of-squares a c))
-        ((and (<= c a) (< c b)) (sum-of-squares a b))))
+        (else (sum-of-squares a b))))
   
 
 (check-equal? (sum-square-largest 5 2 2) 29)
